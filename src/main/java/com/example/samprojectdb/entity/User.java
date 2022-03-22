@@ -9,13 +9,11 @@ public class User {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     @Column(nullable = false)
-    private String username;
+    private String userName;
     @Column(nullable = false)
     private String password;
     @Column(nullable = false)
     private String role;
-    @Column(nullable = false)
-    private boolean isActive;
     @OneToOne(mappedBy = "user") @JsonIgnore
     private AWW aww;
     public User()
@@ -23,12 +21,12 @@ public class User {
 
     }
 
-    public User(Long userId, String username, String password, String role, boolean isActive) {
+    public User(Long userId, String username, String password, String role) {
         this.userId = userId;
-        this.username = username;
+        this.userName = username;
         this.password = password;
         this.role = role;
-        this.isActive = isActive;
+
     }
 
     public Long getUserId() {
@@ -40,11 +38,11 @@ public class User {
     }
 
     public String getUsername() {
-        return username;
+        return userName;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.userName = username;
     }
 
     public String getPassword() {
@@ -63,11 +61,5 @@ public class User {
         this.role = role;
     }
 
-    public boolean isActive() {
-        return isActive;
-    }
 
-    public void setActive(boolean active) {
-        isActive = active;
-    }
 }

@@ -5,29 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16bae4b0-e72a-45be-9153-a9a94cd4c885" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/controller/AdmissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/Admission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/repository/AdmissionRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/beans/AuthenticateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/beans/MyUserDbDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/configurer/MyUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/configurer/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/configurer/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/controller/ApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/filters/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/util/jwtutil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/controller/ChildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/controller/ChildController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/AWC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/AWC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/AWW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/AWW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/CareSpecialist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/CareSpecialist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/DischargeSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/DischargeSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/FollowUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/FollowUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/NRC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/NRC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/repository/ChildRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/repository/ChildRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/controller/ChildController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/controller/ChildController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/controller/DischargeSummaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/controller/DischargeSummaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/AWC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/AWC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/AWW.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/AWW.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/CareSpecialist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/CareSpecialist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/Child.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/DischargeSummary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/DischargeSummary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/FollowUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/FollowUp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/NRC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/NRC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/SaMprojectDbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/SaMprojectDbApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/SaMprojectDbApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/SaMprojectDbApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -47,13 +42,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="25hMfyrU2dhMg5M7uZRrOY2w0Y7" />
   <component name="ProjectLevelVcsManager">
@@ -70,13 +58,15 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Spring Boot.SaMprojectDbApplication">
+  <component name="RunManager" selected="Spring Boot.SaMprojectDbApplication (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.samprojectdb.utils.Main" />
       <module name="SAMprojectDB" />
@@ -90,13 +80,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaMprojectDbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="SAMprojectDB" />
+    <configuration name="SaMprojectDbApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SAM_Child_FollowUps" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.samprojectdb.SaMprojectDbApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SaMprojectDbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.samprojectdb.SaMprojectDbApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Spring Boot.SaMprojectDbApplication" />
+      <item itemvalue="Spring Boot.SaMprojectDbApplication (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -122,6 +127,7 @@
       <workItem from="1647831563753" duration="3475000" />
       <workItem from="1647847728479" duration="699000" />
       <workItem from="1647854143091" duration="10271000" />
+      <workItem from="1647968728177" duration="5275000" />
     </task>
     <servers />
   </component>
@@ -138,6 +144,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
