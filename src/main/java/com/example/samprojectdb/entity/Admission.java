@@ -18,7 +18,10 @@ public class Admission {
     @ManyToOne
     private Child child;
 
+
+
     @OneToOne(mappedBy = "admission")
+    @JsonIgnore
     private DischargeSummary dischargeSummary;
 
     public int getAdmissionId() {
@@ -55,6 +58,14 @@ public class Admission {
 
     public void setAdmittedAt(Date admittedAt) {
         this.admittedAt = admittedAt;
+    }
+
+    public Child getChild() {
+        return child;
+    }
+
+    public void setChild(Child child) {
+        this.child = child;
     }
 
 

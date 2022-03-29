@@ -25,8 +25,12 @@ public class DischargeSummary {
     @OneToMany(mappedBy = "dischargeSummary")
     private List<FollowUp> followUps = new ArrayList<>();
 
-    @OneToOne @JsonIgnore
+
+
+    @OneToOne
+    @JoinColumn(name = "admissionId")
     private Admission admission;
+
     public DischargeSummary()
     {
 
@@ -95,5 +99,13 @@ public class DischargeSummary {
 
     public void setFollowUps(List<FollowUp> followUps) {
         this.followUps = followUps;
+    }
+
+    public Admission getAdmission() {
+        return admission;
+    }
+
+    public void setAdmission(Admission admission) {
+        this.admission = admission;
     }
 }
