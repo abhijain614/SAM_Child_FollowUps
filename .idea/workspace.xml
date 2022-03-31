@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16bae4b0-e72a-45be-9153-a9a94cd4c885" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/beans/AuthenticateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/beans/MyUserDbDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/configurer/MyUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/configurer/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/configurer/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/controller/ApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/filters/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/security/util/jwtutil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/SaMprojectDbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/SaMprojectDbApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/samprojectdb/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/SaMprojectDbApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/SaMprojectDbApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/security/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/samprojectdb/security/controller/ApiController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +111,12 @@
       <workItem from="1647831563753" duration="3475000" />
       <workItem from="1647847728479" duration="699000" />
       <workItem from="1647854143091" duration="10271000" />
-      <workItem from="1647968728177" duration="5275000" />
+      <workItem from="1647968728177" duration="5982000" />
+      <workItem from="1648010637863" duration="112000" />
+      <workItem from="1648012776588" duration="78000" />
+      <workItem from="1648027558280" duration="702000" />
+      <workItem from="1648095133596" duration="156000" />
+      <workItem from="1648704274233" duration="320000" />
     </task>
     <servers />
   </component>
