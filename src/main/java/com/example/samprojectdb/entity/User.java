@@ -14,8 +14,18 @@ public class User {
     private String password;
     @Column(nullable = false)
     private String role;
-    @OneToOne(mappedBy = "user") @JsonIgnore
+    @OneToOne(mappedBy = "user")
+//    @JsonIgnore
     private AWW aww;
+
+    public AWW getAww() {
+        return aww;
+    }
+
+    public void setAww(AWW aww) {
+        this.aww = aww;
+    }
+
     public User()
     {
 

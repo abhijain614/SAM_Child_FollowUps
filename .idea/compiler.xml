@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SAMprojectDB" />
         <module name="SAM_Child_FollowUps" />
+        <module name="New folder (2)" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="New folder (2)" options="-parameters" />
       <module name="SAM_Child_FollowUps" options="-parameters" />
       <module name="SAMprojectDB" options="-parameters" />
     </option>

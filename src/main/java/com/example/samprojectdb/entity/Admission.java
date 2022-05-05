@@ -11,6 +11,17 @@ public class Admission {
     @Column(nullable = false)
     private Date admittedAt;
 
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    @Column(nullable = false)
+    private double weight;
+
     @ManyToOne
     @JsonIgnore
     private NRC nrc;
@@ -18,7 +29,8 @@ public class Admission {
     @ManyToOne
     private Child child;
 
-    @OneToOne(mappedBy = "admission") @JsonIgnore
+    @OneToOne(mappedBy = "admission")
+    @JsonIgnore
     private DischargeSummary dischargeSummary;
 
     public int getAdmissionId() {

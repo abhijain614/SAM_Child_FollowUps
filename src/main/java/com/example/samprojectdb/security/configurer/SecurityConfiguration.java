@@ -12,20 +12,13 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter
 {
-    /*
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception
-    {
-        auth.inMemoryAuthentication().withUser("gopal").password("gopal").roles("USER")
-                .and().withUser("abhi").password("abhi").roles("ADMIN");
-    }
-
-     */
-
     @Autowired
     MyUserDetailsService myuserDetailsService;
 
@@ -41,6 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter
     @Override
     protected void configure(HttpSecurity http) throws Exception
     {
+        http.cors();
         http.csrf().disable().authorizeRequests()
                 .antMatchers("/authenticate").permitAll()
                 .anyRequest().authenticated()
@@ -60,11 +54,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter
     {
         return super.authenticationManagerBean();
     }
-    /*@Override
-    protected void configure(HttpSecurity http) throws Exception
-    {
-        http.authorizeRequests().antMatchers("/user").hasRole("USER")
-                .antMatchers("/admin").hasRole("ADMIN")
-                .antMatchers("/").permitAll().and().formLogin();
-    }*/
+
 }

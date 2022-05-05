@@ -17,6 +17,7 @@ public class AWW {
 //    @OneToMany(mappedBy = "aww")
 //    @JsonIgnore
 //    private List<Child> children=new ArrayList<>();
+    @JsonIgnore
     @OneToOne
     private User user;
     @OneToMany(mappedBy = "aww")
@@ -28,13 +29,14 @@ public class AWW {
 
     }
 
-//    public AWW(int awwId, String name, String username, String password) {
-//        super();
-//        this.awwId = awwId;
-//        this.name = name;
-//        this.username = username;
-//        this.password = password;
-//    }
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 
 
     public int getAwwId() {
