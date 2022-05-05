@@ -2,6 +2,7 @@ package com.example.samprojectdb.controller;
 
 import com.example.samprojectdb.entity.DischargeSummary;
 import com.example.samprojectdb.entity.FollowUp;
+import com.example.samprojectdb.entity.GrowthStatusRules;
 import com.example.samprojectdb.entity.User;
 import com.example.samprojectdb.repository.DischargeSummaryRepo;
 import com.example.samprojectdb.security.configurer.UserRepository;
@@ -34,6 +35,13 @@ public class DischargeSummaryController {
     @ResponseBody
     public List<DischargeSummary> getAll()
     {
+        UserDetails userDetails = jwtRequestFilter.getUserDetails();
+        String username = userDetails.getUsername();
+        Optional<User> user = userRepository.findByUsername(username);
+        if(user.isEmpty())
+        {
+            return new ArrayList<>();
+        }
         return dischargeSummaryRepo.findAll();
     }
 
@@ -48,8 +56,10 @@ public class DischargeSummaryController {
         UserDetails userDetails = jwtRequestFilter.getUserDetails();
         String username = userDetails.getUsername();
         Optional<User> user = userRepository.findByUsername(username);
-        user.orElseThrow(()->new UsernameNotFoundException("Not found: " + username));
-        user.ifPresent(curUser -> System.out.println(curUser.getAww().getAwwId()));
+        if(user.isEmpty())
+        {
+            return new ArrayList<>();
+        }
 
         return dischargeSummaryRepo.findDischargeSummaryByAww_AwwId(awwId);
     }

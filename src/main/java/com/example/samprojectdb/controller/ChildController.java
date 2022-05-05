@@ -1,15 +1,21 @@
 package com.example.samprojectdb.controller;
 
+import com.example.samprojectdb.entity.Admission;
 import com.example.samprojectdb.entity.Child;
 import com.example.samprojectdb.entity.GrowthStatusRules;
+import com.example.samprojectdb.entity.User;
 import com.example.samprojectdb.repository.ChildRepo;
 import com.example.samprojectdb.repository.GrowthStatusRulesRepo;
+import com.example.samprojectdb.security.configurer.UserRepository;
+import com.example.samprojectdb.security.filters.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.example.samprojectdb.entity.GrowthStatusRules;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,17 +28,39 @@ public class ChildController {
     @Autowired
     private GrowthStatusRulesRepo growthStatusRulesRepo;
 
+    @Autowired
+    JwtRequestFilter jwtRequestFilter;
+
+    @Autowired
+    UserRepository userRepository;
+
     //    @RequestMapping("/demo")
 //    public void display()
 //    {
 //        System.out.println(childRepo.findAll().toString());
 //    }
     @RequestMapping("/findAll")
-    public List<Child> findAll() {
+    public List<Child> findAll()
+    {
+        UserDetails userDetails = jwtRequestFilter.getUserDetails();
+        String username = userDetails.getUsername();
+        Optional<User> user = userRepository.findByUsername(username);
+        if(user.isEmpty())
+        {
+            return new ArrayList<>();
+        }
         return childRepo.findAll();
     }
 
-    public Optional<GrowthStatusRules> getGrowthStatus(double ht) {
+    public Optional<GrowthStatusRules> getGrowthStatus(double ht)
+    {
+        UserDetails userDetails = jwtRequestFilter.getUserDetails();
+        String username = userDetails.getUsername();
+        Optional<User> user = userRepository.findByUsername(username);
+        if(user.isEmpty())
+        {
+            return Optional.ofNullable(new GrowthStatusRules());
+        }
         return growthStatusRulesRepo.findById(ht);
     }
 //    //Return current growth status as per as latest followup
@@ -73,6 +101,13 @@ public class ChildController {
     @RequestMapping("/findByName/{name}")
     public Child findChildByName(@PathVariable("name") String name)
     {
+        UserDetails userDetails = jwtRequestFilter.getUserDetails();
+        String username = userDetails.getUsername();
+        Optional<User> user = userRepository.findByUsername(username);
+        if(user.isEmpty())
+        {
+            return new Child();
+        }
         return childRepo.findChildByName(name);
     }
 }

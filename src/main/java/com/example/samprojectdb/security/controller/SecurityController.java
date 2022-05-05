@@ -20,7 +20,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
-public class ApiController
+public class SecurityController
 {
     @Autowired
     JwtRequestFilter jwtRequestFilter;
@@ -53,7 +53,7 @@ public class ApiController
     public void setResponseHeader(HttpServletResponse response) {
         response.setHeader("Access-Control-Allow-Origin", "*");
     }
-    @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody User authenticateRequest) throws Exception
     {
         try {

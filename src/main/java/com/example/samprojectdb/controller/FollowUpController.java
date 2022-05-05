@@ -2,9 +2,14 @@ package com.example.samprojectdb.controller;
 //import org.springframework.stereotype.Controller;
 import com.example.samprojectdb.entity.FollowUp;
 import com.example.samprojectdb.entity.GrowthStatusRules;
+import com.example.samprojectdb.entity.User;
 import com.example.samprojectdb.repository.FollowUpRepo;
 import com.example.samprojectdb.repository.GrowthStatusRulesRepo;
+import com.example.samprojectdb.security.configurer.UserRepository;
+import com.example.samprojectdb.security.filters.JwtRequestFilter;
+import io.jsonwebtoken.Jwt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Calendar;
@@ -22,9 +27,22 @@ public class FollowUpController {
     private GrowthStatusRulesRepo growthStatusRulesRepo;
     //@RequestMapping("/getFollowUpIdBySamId")
 
+    @Autowired
+    JwtRequestFilter jwtRequestFilter;
+
+    @Autowired
+    UserRepository userRepository;
+
     @GetMapping("/get/{fid}")
     public Optional<FollowUp> getFollowUp(@PathVariable("fid") int fid)
     {
+        UserDetails userDetails = jwtRequestFilter.getUserDetails();
+        String username = userDetails.getUsername();
+        Optional<User> user = userRepository.findByUsername(username);
+        if(user.isEmpty())
+        {
+            Optional.ofNullable(new FollowUp());
+        }
         return followUpRepo.findById(fid);
     }
 //    @GetMapping("/get/all")
@@ -43,6 +61,13 @@ public class FollowUpController {
     @PutMapping(value = "/update",consumes = {"application/json"})
     public Optional<FollowUp> updateFollowUp(@RequestBody FollowUp followUp)
     {
+        UserDetails userDetails = jwtRequestFilter.getUserDetails();
+        String username = userDetails.getUsername();
+        Optional<User> user = userRepository.findByUsername(username);
+        if(user.isEmpty())
+        {
+            Optional.ofNullable(new FollowUp());
+        }
         Integer fid = followUp.getFollowUpId();
         Optional<FollowUp> followUp1 = followUpRepo.findById(fid);
         if(followUp1.isPresent())
