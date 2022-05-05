@@ -3,6 +3,7 @@ import com.example.samprojectdb.entity.Admission;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -19,9 +20,9 @@ public class Child {
     @Column(nullable = false)
     private int age;
     @Column(nullable = false)
-    private Date dob;
+    private LocalDate dob;
     @Column(nullable = false)
-    private char gender;
+    private String gender;
     @Column(nullable = false)
     private String address;
     @Column(nullable = false)
@@ -90,19 +91,19 @@ public class Child {
         this.age = age;
     }
 
-    public Date getDob() {
+    public LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

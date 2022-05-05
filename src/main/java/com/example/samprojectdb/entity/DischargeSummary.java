@@ -3,6 +3,7 @@ package com.example.samprojectdb.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,7 +13,7 @@ public class DischargeSummary {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int dsId;
     @Column(nullable = false)
-    private Date dischargeAt;
+    private LocalDate dischargeAt;
     @Column(nullable = false)
     private double weight;
     @Column(nullable = false)
@@ -31,7 +32,7 @@ public class DischargeSummary {
     {
 
     }
-    public DischargeSummary(int dsId, Date dischargeAt, double weight, String outcome, String treatmentProtocol) {
+    public DischargeSummary(int dsId, LocalDate dischargeAt, double weight, String outcome, String treatmentProtocol) {
         super();
         this.dsId = dsId;
         this.dischargeAt = dischargeAt;
@@ -48,11 +49,11 @@ public class DischargeSummary {
         this.dsId = dsId;
     }
 
-    public Date getDischargeAt() {
+    public LocalDate getDischargeAt() {
         return dischargeAt;
     }
 
-    public void setDischargeAt(Date dischargeAt) {
+    public void setDischargeAt(LocalDate dischargeAt) {
         this.dischargeAt = dischargeAt;
     }
 
